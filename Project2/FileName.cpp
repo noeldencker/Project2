@@ -18,8 +18,10 @@ double fetchExchangeRate() {
 	double rate = 0.0;
 
 	if (curl) {
-		// Frankfurter API kräver ingen nyckel
+		//Frankfurter API kräver ingen nyckel
 		std::string url = "https://api.frankfurter.app/latest?from=SEK&to=EUR";
+		
+
 		curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
 		curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
 		curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readBuffer);
@@ -27,9 +29,10 @@ double fetchExchangeRate() {
 		curl_easy_cleanup(curl);
 
 		if (res == CURLE_OK) {
+			
 			auto j = json::parse(readBuffer);
 			if (j.contains("rates") && j["rates"].contains("EUR")) {
-				rate = j["rates"]["EUR"];
+			rate = j["rates"]["EUR"];
 			}
 			else {
 				cout << "Fel vid hämtning av växelkurs: " << j.dump() << endl;
@@ -42,7 +45,7 @@ double fetchExchangeRate() {
 int main()
 {
 	double kronor;
-	cout << "hur myket sek har du ";
+	cout << "hur myket sek har du" << endl;
 	cin >> kronor;
 	double ex;
 	double exchangeRate = fetchExchangeRate();
@@ -52,7 +55,7 @@ int main()
 	double euro = frog / 1000.0;
 	cout << "du har ";
 	cout << euro ;
-	cout << " euro";
+	
 			
 
 	

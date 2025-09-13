@@ -1,6 +1,6 @@
 ﻿  FileName.cpp
-C:\Users\noel.dencker\source\repos\Project2\Project2\FileName.cpp(50,11): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\noel.dencker\source\repos\Project2\Project2\FileName.cpp(47,9): warning C4101: 'ex': unreferenced local variable
+C:\Users\noel.dencker\source\repos\Project2\Project2\FileName.cpp(53,11): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\noel.dencker\source\repos\Project2\Project2\FileName.cpp(50,9): warning C4101: 'ex': unreferenced local variable
   Project2.vcxproj -> C:\Users\noel.dencker\source\repos\Project2\x64\Debug\Project2.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.
